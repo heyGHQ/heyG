@@ -16,10 +16,10 @@
     /**
      * If false the window show
      */
-    "isPromptAvailable": "!!document.getElementsByTagName("textarea")[0]",
+    "isPromptAvailable": `!!document.getElementsByTagName("textarea")[0]`,
     /**
      * The HTML display in the result drawer on top of the input
      */
-    "getResponse": "[...document.querySelectorAll('.markdown.prose')].pop()?.innerHTML",
+    "getResponse": `[...document.querySelectorAll('.markdown.prose')].pop()?.innerHTML`,
   },
 }
