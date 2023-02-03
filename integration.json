@@ -9,18 +9,17 @@
      * @param prompt string 
      * @returns 
      */
-    "sendPrompt": ({ prompt }) => `
-      if (document.getElementsByTagName("textarea")[0]) {
-          document.getElementsByTagName("textarea")[0].value = '${prompt}';
+    "sendPrompt": `if (document.getElementsByTagName("textarea")[0]) {
+          document.getElementsByTagName("textarea")[0].value = '\${ prompt }';
           setTimeout(() => document.querySelector("textarea ~ button").click(), 1)
       }`,
-    /** 
+    /**
      * If false the window show
      */
-    "isPromptAvailable": () => `!!document.getElementsByTagName("textarea")[0]`,
-    /** 
-     * The HTML display in the result drawer on top of the input 
+    "isPromptAvailable": "!!document.getElementsByTagName("textarea")[0]",
+    /**
+     * The HTML display in the result drawer on top of the input
      */
-    "getResponse": () => `[...document.querySelectorAll('.markdown.prose')].pop()?.innerHTML`,
+    "getResponse": "[...document.querySelectorAll('.markdown.prose')].pop()?.innerHTML",
   },
 }
